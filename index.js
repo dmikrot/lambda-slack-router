@@ -213,8 +213,8 @@ SlackBot.prototype.buildRouter = function () {
     var foundAction;
     var builtEvent = event;
 
-    if (this.config.pingEnabled && event.source && event.source === 'aws.events' &&
-      event.resources && event.resources[0].indexOf('ping') !== -1) {
+    if (this.config.pingEnabled && event.source && event.source === 'aws.events'
+      && event.resources && event.resources[0].indexOf('ping') !== -1) {
       return context.succeed('Ok');
     }
 
